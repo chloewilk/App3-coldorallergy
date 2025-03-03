@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html> 
 <html> 
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
@@ -25,7 +27,6 @@ blah, blah, blah, blah
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
    <head> 
       <title>Cold or Allergies?</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,40 +35,32 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+    var allergy_count = 0;
+    var cold_count = 0;
 
-/ / Increment allergy count
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+    // Increment allergy count
+    function allergyAdd(){
+        allergy_count = allergy_count + 1;
+    }
 
-        }
+    // Increment cold count
+    function coldAdd(){
+        cold_count = cold_count + 1;
+    }
 
-/ / Increment cold count
-        function coldAdd(){
-            cold_count = cold_count + 1;
-        }
-
-/ / Calculate percentage for allergies and cold
- function resultsPercent(){
+    // Calculate percentage for allergy and cold
+    function resultsPercent(){
         var total_questions = 4; // Total number of questions
         var allergy_percentage = (allergy_count / total_questions) * 100;
         var cold_percentage = (cold_count / total_questions) * 100;
 
-/ / Display the results
-var resultsText = document.getElementById('resultsText');
-resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixed(2) + "%<br>" +
-"Probability of Allergies: " +cold_percentage.toFixed(2) + "%";
-
- }
-	 
-  </script>
-
-
-
+        // Display the result
+        var resultsText = document.getElementById('resultsText');
+        resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixed(2) + "%<br>" +
+                                "Probability of Cold: " + cold_percentage.toFixed(2) + "%";
+    }
+</script>
 
 <style>	
 .body {
@@ -85,7 +78,7 @@ resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixe
     background-color: hsl(0,0%,100%);
 }
 
-  .page:target {
+.page:target {
     left: 0vw;
     z-index: 1;
 }
@@ -97,12 +90,9 @@ resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixe
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
-	
+	<p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <!-- Question 1 -->
@@ -115,7 +105,7 @@ resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixe
         <p>Are your eyes watery or itchy?</p>    
     	</div>
 	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-        <a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+    <a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 </div>
 
 <!-- Question 2 -->
@@ -128,7 +118,7 @@ resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixe
 		<p>Do you have a fever?</p>
 	</div>
 	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-        <a href="#three" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+    <a href="#three" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 </div>	
 
 <!-- Question 3 -->
@@ -141,7 +131,8 @@ resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixe
 		<p>Do you have a sore throat?</p>
 	</div>
 	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-        <a href="#four" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+    <a href="#four" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+</div>
 
 <!-- Question 4 -->
 <div class="page" id="four">
@@ -153,7 +144,7 @@ resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixe
 		<p>Are your symptoms seasonal or chronic?</p>
 	</div>
 	<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-        <a href="#results" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+    <a href="#results" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
 <!-- Results Page -->
 <div class="page" id="results">
@@ -163,7 +154,7 @@ resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixe
 	
 	<div id="content" class="w3-container">
 		<p id="resultsText"></p>
-			<a href="#results" onclick="resultsPercent();" class="w3-btn w3-black"> Show Results </a>
+        <a href="#results" onclick="resultsPercent();" class="w3-btn w3-black"> Show Results </a>
 	</div>
 </div>
 
