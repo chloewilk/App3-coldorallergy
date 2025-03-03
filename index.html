@@ -56,8 +56,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var total_questions = 4; // Total number of questions
         var allergy_percentage = (allergy_count / total_questions) * 100;
         var cold_percentage = (cold_count / total_questions) * 100;
+
+/ / Display the results
+var resultsText = document.getElementById('resultsText');
+resultsText.innerHTML = "Probability of Allergies: " + allergy_percentage.toFixed(2) + "%<br>" +
+"Probability of Allergies: " +cold_percentage.toFixed(2) + "%";
+
+ }
 	 
   </script>
+
 
 
 
